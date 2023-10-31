@@ -6,7 +6,7 @@ FROM openjdk:17.0.1-jdk-slim
 
 VOLUME /tmp
 
-COPY target/quickhandy-0.0.1-SNAPSHOT.jar quickhandy.jar
+COPY target/*.jar quickhandy.jar
 
 ENTRYPOINT ["java","-jar","/quickhandy.jar"]
 
