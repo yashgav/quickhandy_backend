@@ -9,8 +9,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 
 @RestController
-//@CrossOrigin("http://localhost:3000/")
-@CrossOrigin("https://yashgav.github.io/QuickHandy/")
+@CrossOrigin(origins = {"http://localhost:3000", "https://yashgav.github.io/QuickHandy"})
 @RequestMapping("/quick_handy/customer_post")
 public class CustomerPostController {
     @Autowired

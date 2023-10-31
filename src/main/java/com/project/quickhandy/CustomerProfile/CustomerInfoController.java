@@ -20,8 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-//@CrossOrigin("http://localhost:3000/")
-@CrossOrigin("https://yashgav.github.io/QuickHandy/")
+@CrossOrigin(origins = {"http://localhost:3000", "https://yashgav.github.io/QuickHandy"})
 @RequestMapping("/quick_handy/customer_info")
 public class CustomerInfoController {
 	@Autowired
