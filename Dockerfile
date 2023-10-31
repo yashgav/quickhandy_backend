@@ -1,8 +1,6 @@
-FROM openjdk:17.0.1-jdk-slim
-
+FROM openjdk:11
+VOLUME /tmp
 EXPOSE 8080
-
-ADD target/quickhandy.jar quickhandy.jar
-
-ENTRYPOINT ["java","-jar","/quickhandy.jar"]
-
+ARG JAR_FILE=target/quickhandy.jar
+ADD ${JAR_FILE} app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
