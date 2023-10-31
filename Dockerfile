@@ -1,4 +1,4 @@
-FROM eclipse-temurin:17-jdk-apline
+FROM adoptopenjdk:17-jre-hotspot
 
 VOLUME /tmp
 
