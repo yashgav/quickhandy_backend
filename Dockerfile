@@ -1,13 +1,8 @@
-FROM maven:3.8.5-openjdk-17 AS build
+#FROM openjdk:17.0.1-jdk-slim
+#
+#EXPOSE 8080
+#
+#ADD target/quickhandy.jar quickhandy.jar
+#
+#ENTRYPOINT ["java","-jar","/quickhandy.jar"]
 
-RUN mvn clean package -DskipTests
-
-FROM openjdk:17.0.1-jdk-slim
-
-VOLUME /tmp
-
-COPY target/*.jar quickhandy.jar
-
-ENTRYPOINT ["java","-jar","/quickhandy.jar"]
-
-EXPOSE 8080
